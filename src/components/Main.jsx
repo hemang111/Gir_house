@@ -32,6 +32,11 @@
           .to(expandRecRef.current, {
             width: "80dvw",
             height: "80dvh",
+            x: 0,
+            y: 0,
+            rotationY: 0,
+            rotationX: 0,
+            transformPerspective: 0,
             duration: 1,
             ease: "power4.inOut",
           });
@@ -175,6 +180,7 @@
             <img
               src="https://images.unsplash.com/photo-1618641662184-bafefb91a542?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGhlJTIwYmxhY2slMjBsaW9ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
               alt="enter_into_gir_world"
+              draggable="false"
               className="w-full h-full object-cover"
             />
           </div>
