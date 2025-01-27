@@ -3,7 +3,7 @@ import Button from './Button';
 import { TiLocationArrow } from "react-icons/ti";
 const Header = () => {
     return (
-      <div className="p-5 pr-2 w-screen h-fit fixed bg-blue-50 overflow-hidden z-50" >
+      <div className="p-5 pr-2 w-screen  block h-fit fixed bg-blue-50 overflow-hidden z-50" >
         <section className="relative flex w-screen items-center justify-between">
           <h1 className="font-robert-regular text-xl font-bold ml-5">Gir House</h1>
           <div className="absolute-center flex justify-center gap-7">

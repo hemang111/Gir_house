@@ -7,7 +7,6 @@ import About from './components/About';
 const App = () => {
   return (
     <ReactLenis root>
-    <Header/>
     <Main/>
     <About/>
     </ReactLenis>
