@@ -155,7 +155,7 @@
       <div className="min-h-screen min-w-screen overflow-hidden relative" ref={container}>
       <Header/>
         <section className="flex justify-center items-center gap-4 h-screen">
-          <h1 className="ha1 hero-heading special-font text-4xl font-zentry z-10">
+          <h1 className="ha1 hero-heading special-font text-4xl font-zentry z-10" style={{ userSelect: "none"}}>
             G<b>I</b>R{" "}
           </h1>
           <div
@@ -169,11 +169,13 @@
               width: "16rem",
               height: "16rem",
               top: "50%",
+              // cursor: "pointer",
+              userSelect: "none",
               left: "50%",
               transform: "translate(-50%, -50%) scale(0)",
               borderRadius: "0.5rem",
               overflow: "hidden",
-              zIndex: isFullScreen ? 9 : 1,
+              zIndex: isFullScreen ? 11 : 1,
             }}
             onClick={handleExpandClick}
           >
@@ -181,10 +183,11 @@
               src="https://images.unsplash.com/photo-1618641662184-bafefb91a542?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGhlJTIwYmxhY2slMjBsaW9ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
               alt="enter_into_gir_world"
               draggable="false"
+
               className="w-full h-full object-cover"
             />
           </div>
-          <h1 className="ha2 hero-heading special-font font-zentry z-10">
+          <h1 className="ha2 hero-heading special-font font-zentry z-10" style={{ userSelect: "none"}}>
             HO<b>U</b>SE
           </h1>
         </section>
