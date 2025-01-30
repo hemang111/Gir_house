@@ -32,6 +32,8 @@ const App = () => {
           end: 'top 65%',
           pin: true,
           pinSpacing: false,
+          pinType: 'transform',
+          anticipatePin: 1
         })
 
         gsap.to(cardInner, {
@@ -42,7 +44,8 @@ const App = () => {
             start: 'top 35%',
             endTrigger: '.outro',
             end: 'top 65%',
-            scrub: true
+            scrub: true,
+            
           }
         })
       }
@@ -51,6 +54,7 @@ const App = () => {
   useEffect(() => {
     return () => ScrollTrigger.getAll().forEach(t => t.kill())
   }, [])
+
   return (
     <div className="app" ref={Container}>
     <ReactLenis root>

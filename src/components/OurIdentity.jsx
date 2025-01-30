@@ -28,7 +28,7 @@
     const OurIdentity = ({ introRef, outroRef }) => {
     return (
     <div>
-    <h1 className="font-bold hero-heading text-center text-4xl sm:text-6xl lg:text-8xl mt-10 px-4 mb-12">
+    <h1 className="font-bold  hero-heading text-center text-4xl sm:text-6xl lg:text-8xl mt-10 px-4 mb-32">
           Gir - The Champions House
         </h1>
     {cards.map((card,index) => <Card key={index} {...card} index={index} />)}
