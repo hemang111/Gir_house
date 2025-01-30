@@ -16,6 +16,71 @@ body {
   background-color: #dfdff0;
   font-family: "General Sans", sans-serif;
 }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.card h1{
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 2.5rem;
+}
+.card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card p{
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.card .intro h1 , .outro h1{
+  margin-bottom: 0;
+}
+
+.card{
+  position: relative;
+}
+
+.card-inner{
+  position: relative;
+  will-change: transform;
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  display: flex;
+  gap: 4em;
+}
+
+.card-content {
+  flex:3;
+}
+
+.card-img{
+  flex:1;
+  aspect-ratio: 16/9;
+  overflow:hidden;
+  border-radius: 0.75em;
+}
+
+#card-1 .card-inner{
+  background-color: #c3abff;
+}
+#card-2 .card-inner{
+    background-color: #ffffff;
+}
+#card-3 .card-inner{
+    background-color: #f7ab71;
+}
+
+@media (max-width:900px) {
+  .card > h1{
+      margin-bottom: 4rem;
+  }
+  
+}
 ::-webkit-scrollbar-thumb:active {
     background: linear-gradient(45deg, #ff5252, #d50000);
   }

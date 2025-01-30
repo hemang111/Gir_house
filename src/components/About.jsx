@@ -1,7 +1,7 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
-
+import OurIdentity from "./OurIdentity";
 const About = () => {
   const headingRef = useRef(null);
 
@@ -27,7 +27,8 @@ const About = () => {
   }, []);
 
   return (
-    <div className="w-screen relative min-h-screen">
+    <>
+    <div className="intro w-screen relative min-h-screen py-28 ">
       <section className="flex flex-col justify-center items-center gap-10">
         <h1
           ref={headingRef}
@@ -36,7 +37,6 @@ const About = () => {
           Things that makes us Gir
         </h1>
         <div className="w-[90%] sm:w-[80%] h-auto relative overflow-hidden">
-          {/* Bento grid section */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <div className="w-full h-[40vh] sm:h-[30vh] md:h-[40vh] rounded-lg bg-slate-400 col-span-2 lg:col-span-1"></div>
             <div className="w-full h-[30vh] sm:h-[40vh] rounded-lg bg-slate-400 col-span-1 lg:col-span-1"></div>
@@ -47,6 +47,8 @@ const About = () => {
         </div>
       </section>
     </div>
+
+    </>
   );
 };
 

@@ -12,6 +12,7 @@
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "controlkit": "github:automat/controlkit.js",
+    "framer-motion": "^12.0.6",
     "gsap": "^3.12.7",
     "lenis": "^1.1.20",
     "react": "^18.3.1",

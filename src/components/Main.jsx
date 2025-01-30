@@ -15,7 +15,6 @@
     const [onls,setOnls] = useState(false);
     const [cors,setCors] = useState(false);
     const handleExpandClick = () => {
-      console.log(cors);
       if(cors){
       if (!isFullScreen) {
         const tl = gsap.timeline();
@@ -90,7 +89,6 @@
           ease: "power4.out",
           onComplete: () => {
             setCors(true);
-            setOnls(true);
             gsap.to(textRef.current, {
               text: "Welcome to the Lions' Den",
               duration: 3,
@@ -107,7 +105,7 @@
       const expandRec = expandRecRef.current;
 
       const handleMouseMove = (event) => {
-        if (onls && !isFullScreen) {
+        if (!isFullScreen) {
           const rect = expandRec.getBoundingClientRect();
           const centerX = rect.left + rect.width / 2;
           const centerY = rect.top + rect.height / 2;
@@ -159,34 +157,33 @@
             G<b>I</b>R{" "}
           </h1>
           <div
-            ref={expandRecRef}
-            className="expand_rec"
-            style={{
-              position: "absolute",
-              transformStyle: "preserve-3d",
-              willChange: "transform",
-              cursor: "pointer",
-              width: "16rem",
-              height: "16rem",
-              top: "50%",
-              // cursor: "pointer",
-              userSelect: "none",
-              left: "50%",
-              transform: "translate(-50%, -50%) scale(0)",
-              borderRadius: "0.5rem",
-              overflow: "hidden",
-              zIndex: isFullScreen ? 11 : 1,
-            }}
-            onClick={handleExpandClick}
-          >
-            <img
-              src="https://images.unsplash.com/photo-1618641662184-bafefb91a542?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGhlJTIwYmxhY2slMjBsaW9ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
-              alt="enter_into_gir_world"
-              draggable="false"
+  ref={expandRecRef}
+  className="expand_rec"
+  style={{
+    position: "absolute",
+    transformStyle: "preserve-3d",
+    willChange: "transform",
+    cursor: "pointer",
+    width: "16rem",
+    height: "16rem",
+    top: "50%",
+    userSelect: "none",
+    left: "50%",
+    transform: "translate(-50%, -50%) scale(0)",
+    borderRadius: "0.5rem",
+    overflow: "hidden",
+    zIndex: isFullScreen ? 11 : 1,
+  }}
+  onClick={handleExpandClick}
+>
+  <img
+    src="https://images.unsplash.com/photo-1618641662184-bafefb91a542?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGhlJTIwYmxhY2slMjBsaW9ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
+    alt="enter_into_gir_world"
+    draggable="false"
+    className="w-full h-full object-cover"
+  />
+</div>
 
-              className="w-full h-full object-cover"
-            />
-          </div>
           <h1 className="ha2 hero-heading special-font font-zentry z-10" style={{ userSelect: "none"}}>
             HO<b>U</b>SE
           </h1>
