@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Main = () => {
   const container = useRef(null);
   const expandRecRef = useRef(null);
+  const Transform = useRef(null);
   const textRef = useRef(null);
   const [isFullScreen, setIsFullScreen] = useState(true);
   const [cors, setCors] = useState(false);
@@ -115,14 +116,14 @@ const Main = () => {
   );
   // Custom Hook he to make code look clean
   useMouseMagnet3D(
-    expandRecRef,
+    Transform,
     container,
     [isFullScreen],
     isFullScreen,
     0.3,
     "power4.out",
-    0.05,
-    0.03
+    0.02,
+    0.05
   );
   return (
     <div
@@ -130,7 +131,8 @@ const Main = () => {
       ref={container}
     >
       <Header />
-      <section className="flex justify-center items-center gap-4 h-screen">
+      <section  className="flex justify-center items-center gap-4 h-screen">
+        <div ref={Transform} className="flex justify-center items-center gap-4">
         <h1
           className="ha1 hero-heading special-font text-4xl font-zentry z-10"
           style={{ userSelect: "none" }}
@@ -170,6 +172,7 @@ const Main = () => {
         >
           HO<b>U</b>SE
         </h1>
+        </div>
       </section>
       <section className="absolute bottom-20 w-screen flex align-middle items-center justify-center">
         <p
