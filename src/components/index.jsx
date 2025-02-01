@@ -5,7 +5,7 @@ import Header from './Sub_Components/Header';
 import Main from './Sections/Main';
 import Marquee1 from './Sub_Components/Marquee';
 import OurIdentity from './Sections/OurIdentity';
-
+import Faq from './Sections/Faq';
 export {
   About,
   Button,
@@ -14,4 +14,5 @@ export {
   Main,
   Marquee1,
   OurIdentity,
+  Faq,
 };
