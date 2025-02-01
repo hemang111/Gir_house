@@ -7,7 +7,7 @@ import OurIdentity from './components/OurIdentity';
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
+import Marquee from 'react-fast-marquee';
 const App = () => {
   const Container = useRef();
   useGSAP(() => {
@@ -50,10 +50,10 @@ const App = () => {
         })
       }
     })
-  }, { scope: Container })
-  useEffect(() => {
     return () => ScrollTrigger.getAll().forEach(t => t.kill())
-  }, [])
+  }, { scope: Container })
+
+
 
   return (
     <div className="app" ref={Container}>
@@ -65,7 +65,20 @@ const App = () => {
     <h1 className="font-bold hero-heading text-center  text-4xl sm:text-6xl lg:text-8xl mt-10 px-4">
           Student Life@ Gir
         </h1>
+       
     </section>
+    <section className='relative'>
+    <Marquee className='absolute flex h-full justify-start overflow-hidden font-semibold text-yellow-400 font-zentry items-center text-9xl bg-red-400 left-[-100px] origin-center' style={{border: '2px solid black', rotate: '9deg' , width:'150dvw' }} direction='right'  speed={200}>
+    <h1 className='ml-2'> Gir </h1><div className='ml-2 h-16 w-16 bg-yellow-400 rounded-full'></div> <h1 className='ml-2 mr-5'>The Lion's Ascent</h1>
+     <h1 className='ml-2'> Gir </h1><div className='ml-2 h-16 w-16 bg-yellow-400 rounded-full'></div> <h1 className='ml-2 mr-5'>The Lion's Ascent</h1>
+     <h1 className='ml-2'> Gir </h1><div className='ml-2 h-16 w-16 bg-yellow-400 rounded-full'></div> <h1 className='ml-2 mr-5'>The Lion's Ascent</h1>
+    </Marquee>
+    <Marquee className='absoulute flex h-full justify-start overflow-hidden text-yellow-400  font-semibold font-zentry items-center text-9xl bg-yellow-400 left-[-100px] top-[-1.8em]' direction='left' speed={200} style={{border: '2px solid black', rotate: '-9deg' , width:'150dvw' }}>
+     <h1 className='ml-2'> Gir </h1><div className='ml-2 h-16 w-16 bg-red-400 rounded-full'></div> <h1 className='ml-2 mr-5'>The Lion's Ascent</h1>
+     <h1 className='ml-2'> Gir </h1><div className='ml-2 h-16 w-16 bg-red-400 rounded-full'></div> <h1 className='ml-2 mr-5'>The Lion's Ascent</h1>
+     <h1 className='ml-2'> Gir </h1><div className='ml-2 h-16 w-16 bg-red-400 rounded-full'></div> <h1 className='ml-2 mr-5'>The Lion's Ascent</h1>
+    </Marquee>
+    </section> 
     </ReactLenis>
     </div>
   )
