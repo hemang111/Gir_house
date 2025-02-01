@@ -12,10 +12,9 @@ const App = () => {
     <About/>
     <OurIdentity/>
     <section className='m-7 w-screen min-h-screen outro' >
-    <h1 className="font-bold hero-heading text-center  text-4xl sm:text-6xl lg:text-8xl mt-10 px-4">
+    <h1 className="font-bold hero-heading text-center text-4xl sm:text-6xl lg:text-8xl mt-10 px-4">
           Student Life @ Gir
         </h1>
-       
     </section>
     <Marquee1/>
     </ReactLenis>

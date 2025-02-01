@@ -12,7 +12,7 @@ const Main = () => {
   const container = useRef(null);
   const expandRecRef = useRef(null);
   const textRef = useRef(null);
-  const [isFullScreen, setIsFullScreen] = useState(false);
+  const [isFullScreen, setIsFullScreen] = useState(true);
   const [cors, setCors] = useState(false);
   const [isClicked, setisClicked] = useState(false);
   const handleExpandClick = () => {
@@ -70,6 +70,7 @@ const Main = () => {
             expandRecRef.current.style.pointerEvents = "none";
           },
           onComplete: () => {
+            setIsFullScreen(false);
             expandRecRef.current.style.pointerEvents = "auto";
           },
         })
@@ -84,7 +85,6 @@ const Main = () => {
             duration: 0.3,
             ease: "power4.inOut",
           });
-        setIsFullScreen(false);
       }
     }
   }, [isClicked]);
@@ -101,6 +101,7 @@ const Main = () => {
           ease: "power4.out",
           onComplete: () => {
             setCors(true);
+            setIsFullScreen(false);
             gsap.to(textRef.current, {
               text: "Welcome to the Lions' Den",
               duration: 3,
