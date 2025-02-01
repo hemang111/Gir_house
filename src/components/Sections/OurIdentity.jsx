@@ -1,12 +1,6 @@
     import React from 'react'
-    import Card from './Card'
-    import './OIR.css'
-    import { useRef } from 'react';
-    import gsap from 'gsap';
-    import { useGSAP } from '@gsap/react';
-    import { ScrollTrigger } from 'gsap/all';
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.registerPlugin(useGSAP);
+    import Card from '../Sub_Components/Card'
+    import './Id.css'
     const cards = [
         {
             title: "Content Marketing",
@@ -25,7 +19,7 @@
             copy: "Leverage actionable insights from business metrics to optimize strategies and make informed decisions."
         }
     ];
-    const OurIdentity = ({ introRef, outroRef }) => {
+    const OurIdentity = () => {
     return (
     <div>
     <h1 className="font-bold  hero-heading text-center text-4xl sm:text-6xl lg:text-8xl mt-10 px-4 mb-32">

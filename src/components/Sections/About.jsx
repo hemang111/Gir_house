@@ -1,7 +1,6 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
-import OurIdentity from "./OurIdentity";
 const About = () => {
   const headingRef = useRef(null);
 
