@@ -8,6 +8,7 @@ function useMouseMagnet3D(
   Turner,
   duration,
   ease,
+  prespective,
   strengthLinear,
   strengthRotation
 ) {
@@ -15,16 +16,21 @@ function useMouseMagnet3D(
     const expandRec = ref.current;
     const handleMouseMove = (event) => {
       if (!Turner) {
+        console.log("ha");
         const rect = expandRec.getBoundingClientRect();
         const offsetX = event.clientX - (rect.left + rect.width / 2);
         const offsetY = event.clientY - (rect.top + rect.height / 2);
-
+        console.log(offsetX)
+        console.log(offsetY)
+        gsap.set(expandRec, {
+          position: "relative",
+        })
         gsap.to(expandRec, {
           x: offsetX * strengthLinear,
           y: offsetY * strengthLinear,
           rotationY: offsetX * strengthRotation,
           rotationX: -offsetY * strengthRotation,
-          transformPerspective: 800,
+          transformPerspective: prespective,
           duration: duration,
           ease: ease,
         });

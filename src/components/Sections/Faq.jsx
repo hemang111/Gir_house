@@ -2,7 +2,6 @@ import React from "react";
 import Marquee1 from "../Sub_Components/Marquee";
 import { Accordion, AccordionDetails, AccordionSummary , useRef , useState} from "../../utils";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { useMouseMagnet3D } from "../../hooks/useMouseMagnet3D";
 const Faq = () => {
 const container = useRef(null);
   const [expanded, setExpanded] = React.useState("panel1");
@@ -11,25 +10,16 @@ const container = useRef(null);
     setExpanded(newExpanded ? panel : false);
   };
   const parentRef = useRef(null);
-  useMouseMagnet3D(
-    container,
-    parentRef,
-    [],
-    isFullScreen,
-    0.3,
-    "power4.out",
-    0.2,
-    0.5
-  );
   return (
-    <section ref = {parentRef} className="flex flex-col items-center   w-screen min-h-screen  mb-10">
+    <section className="flex flex-col items-center   w-screen min-h-screen">
       <h1 className="font-bold hero-heading text-center text-4xl sm:text-6xl lg:text-8xl mt-10 px-4">
         Frequently Asked Questions
       </h1>
       <div
+      className="lg:w-[60%] md:w-[90vw] sm:w-[90vw]"
         style={{
           marginTop: "2rem",
-          width: "60%",
+        //   width: "60%",
           marginBottom: 10,
           overflow: "hidden",
           borderRadius: "10px",
@@ -67,14 +57,7 @@ const container = useRef(null);
           </Accordion>
         ))}
       </div>
-      <div ref={container} style={{
-                    position:"relative",
-                    padding:"2rem",
-                    transformStyle: "preserve-3d",
-                    willChange: "transform",
-      }}>
       <Marquee1/>
-      </div>
     </section>
   );
 };
